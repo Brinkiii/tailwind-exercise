@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 640px) {
+	.container {
+		width: 90%;
+	}
+}
+
+.first,
+.second,
+.third,
+.fourth {
+	background-size: cover;
+	background-position: center;
+}
+.first,
+.fourth {
+	background-image: url(img/me.jpg);
+}
+.second {
+	background-image: url(img/sleep1.webp);
+}
+.third {
+	background-image: url(img/sleep2.png);
+}
+
+.scroll {
+	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}

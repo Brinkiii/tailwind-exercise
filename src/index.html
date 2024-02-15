@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="output.css" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<header>
+			<nav
+				class="fixed top-0 z-10 w-full border-gray-200 bg-white transition-all dark:bg-gray-900"
+				id="navigation"
+			>
+				<div
+					class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
+				>
+					<a
+						href="https://flowbite.com/"
+						class="flex items-center space-x-3 rtl:space-x-reverse"
+					>
+						<img
+							src="https://flowbite.com/docs/images/logo.svg"
+							class="h-8"
+							alt="Flowbite Logo"
+						/>
+						<span
+							class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
+							>Flowbite</span
+						>
+					</a>
+					<button
+						data-collapse-toggle="navbar-default"
+						type="button"
+						class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+						aria-controls="navbar-default"
+						aria-expanded="false"
+					>
+						<span class="sr-only">Open main menu</span>
+						<svg
+							class="h-5 w-5"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 17 14"
+						>
+							<path
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M1 1h15M1 7h15M1 13h15"
+							/>
+						</svg>
+					</button>
+					<div class="hidden w-full md:block md:w-auto" id="navbar-default">
+						<ul
+							class="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 rtl:space-x-reverse dark:border-gray-700 dark:bg-gray-800 md:dark:bg-gray-900"
+						>
+							<li>
+								<a
+									href="#"
+									class="block rounded bg-blue-700 px-3 py-2 text-white md:bg-transparent md:p-0 md:text-blue-700 dark:text-white md:dark:text-blue-500"
+									aria-current="page"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="/src/about.html"
+									class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+									>Services</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<button
+									id="theme-toggle"
+									type="button"
+									class="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+								>
+									<svg
+										id="theme-toggle-dark-icon"
+										class="hidden h-5 w-5"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+										></path>
+									</svg>
+									<svg
+										id="theme-toggle-light-icon"
+										class="hidden h-5 w-5"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+										></path>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<section class="mt-[72px] bg-white dark:bg-gray-900">
+				<div
+					class="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0"
+				>
+					<div class="mr-auto place-self-center lg:col-span-7">
+						<h1
+							class="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white"
+						>
+							Payments tool for software companies
+						</h1>
+						<p
+							class="mb-6 max-w-2xl font-light text-gray-500 md:text-lg lg:mb-8 lg:text-xl dark:text-gray-400"
+						>
+							From checkout to global sales tax compliance, companies around the
+							world use Flowbite to simplify their payment stack.
+						</p>
+						<a
+							href="#"
+							class="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4"
+						>
+							Get started
+							<svg
+								class="-mr-1 ml-2 h-5 w-5"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								></path>
+							</svg>
+						</a>
+						<a
+							href="#"
+							class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+						>
+							Speak to Sales
+						</a>
+					</div>
+					<div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
+						<img
+							src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+							alt="mockup"
+						/>
+					</div>
+				</div>
+			</section>
+		</header>
+		<main>
+			<div class="bg-white py-24 sm:py-32">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto max-w-2xl lg:text-center">
+						<h2 class="text-base font-semibold leading-7 text-indigo-600">
+							Deploy faster
+						</h2>
+						<p
+							class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+						>
+							Everything you need to deploy your app
+						</p>
+						<p class="mt-6 text-lg leading-8 text-gray-600">
+							Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+							Suspendisse eget egestas a elementum pulvinar et feugiat blandit
+							at. In mi viverra elit nunc.
+						</p>
+					</div>
+					<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+						<dl
+							class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+						>
+							<div class="relative pl-16">
+								<dt class="text-base font-semibold leading-7 text-gray-900">
+									<div
+										class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+									>
+										<svg
+											class="h-6 w-6 text-white"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+											/>
+										</svg>
+									</div>
+									Push to deploy
+								</dt>
+								<dd class="mt-2 text-base leading-7 text-gray-600">
+									Morbi viverra dui mi arcu sed. Tellus semper adipiscing
+									suspendisse semper morbi. Odio urna massa nunc massa.
+								</dd>
+							</div>
+							<div class="relative pl-16">
+								<dt class="text-base font-semibold leading-7 text-gray-900">
+									<div
+										class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+									>
+										<svg
+											class="h-6 w-6 text-white"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+											/>
+										</svg>
+									</div>
+									SSL certificates
+								</dt>
+								<dd class="mt-2 text-base leading-7 text-gray-600">
+									Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
+									eget. Sem sodales gravida quam turpis enim lacus amet.
+								</dd>
+							</div>
+							<div class="relative pl-16">
+								<dt class="text-base font-semibold leading-7 text-gray-900">
+									<div
+										class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+									>
+										<svg
+											class="h-6 w-6 text-white"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+											/>
+										</svg>
+									</div>
+									Simple queues
+								</dt>
+								<dd class="mt-2 text-base leading-7 text-gray-600">
+									Quisque est vel vulputate cursus. Risus proin diam nunc
+									commodo. Lobortis auctor congue commodo diam neque.
+								</dd>
+							</div>
+							<div class="relative pl-16">
+								<dt class="text-base font-semibold leading-7 text-gray-900">
+									<div
+										class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+									>
+										<svg
+											class="h-6 w-6 text-white"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											aria-hidden="true"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
+											/>
+										</svg>
+									</div>
+									Advanced security
+								</dt>
+								<dd class="mt-2 text-base leading-7 text-gray-600">
+									Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt
+									mattis aliquet hac quis. Id hac maecenas ac donec pharetra
+									eget.
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<section class="container mx-auto bg-white dark:bg-gray-900">
+				<div
+					class="mx-auto items-center gap-16 py-8 lg:grid lg:grid-cols-2 lg:py-16"
+				>
+					<div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+						<h2
+							class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+						>
+							We didn't reinvent the wheel
+						</h2>
+						<p class="mb-4">
+							We are strategists, designers and developers. Innovators and
+							problem solvers. Small enough to be simple and quick, but big
+							enough to deliver the scope you want at the pace you need. Small
+							enough to be simple and quick, but big enough to deliver the scope
+							you want at the pace you need.
+						</p>
+						<p>
+							We are strategists, designers and developers. Innovators and
+							problem solvers. Small enough to be simple and quick.
+						</p>
+					</div>
+					<div class="mt-8 grid grid-cols-2 gap-4">
+						<img
+							class="w-full rounded-lg"
+							src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+							alt="office content 1"
+						/>
+						<img
+							class="mt-4 w-full rounded-lg lg:mt-10"
+							src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+							alt="office content 2"
+						/>
+					</div>
+				</div>
+			</section>
+			<div class="container mx-auto">
+				<div class="grid grid-cols-2 gap-2">
+					<div class="first h-96 rounded-lg lg:h-[636px]"></div>
+					<div class="second h-96 rounded-lg lg:h-[636px]"></div>
+					<div class="third h-96 rounded-lg lg:h-[636px]"></div>
+					<div class="fourth h-96 rounded-lg lg:h-[636px]"></div>
+				</div>
+			</div>
+			<div class="container mx-auto px-8">
+				<div
+					id="accordion-flush"
+					data-accordion="collapse"
+					data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+					data-inactive-classes="text-gray-500 dark:text-gray-400"
+				>
+					<h2 id="accordion-flush-heading-1">
+						<button
+							type="button"
+							class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:border-gray-700 dark:text-gray-400"
+							data-accordion-target="#accordion-flush-body-1"
+							aria-expanded="true"
+							aria-controls="accordion-flush-body-1"
+						>
+							<span>What is Flowbite?</span>
+							<svg
+								data-accordion-icon
+								class="h-3 w-3 shrink-0 rotate-180"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-flush-body-1"
+						class="hidden"
+						aria-labelledby="accordion-flush-heading-1"
+					>
+						<div class="border-b border-gray-200 py-5 dark:border-gray-700">
+							<p class="mb-2 text-gray-500 dark:text-gray-400">
+								Flowbite is an open-source library of interactive components
+								built on top of Tailwind CSS including buttons, dropdowns,
+								modals, navbars, and more.
+							</p>
+							<p class="text-gray-500 dark:text-gray-400">
+								Check out this guide to learn how to
+								<a
+									href="/docs/getting-started/introduction/"
+									class="text-blue-600 hover:underline dark:text-blue-500"
+									>get started</a
+								>
+								and start developing websites even faster with components on top
+								of Tailwind CSS.
+							</p>
+						</div>
+					</div>
+					<h2 id="accordion-flush-heading-2">
+						<button
+							type="button"
+							class="flex w-full items-center justify-between gap-3 border-b border-gray-200 py-5 font-medium text-gray-500 rtl:text-right dark:border-gray-700 dark:text-gray-400"
+							data-accordion-target="#accordion-flush-body-2"
+							aria-expanded="false"
+							aria-controls="accordion-flush-body-2"
+						>
+							<span>Is there a Figma file available?</span>
+							<svg
+								data-accordion-icon
+								class="h-3 w-3 shrink-0 rotate-180"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-flush-body-2"
+						class="hidden"
+						aria-labelledby="accordion-flush-heading-2"
+					>
+						<div
+							class="border-b border-gray-200 bg-black py-5 dark:border-gray-700"
+						>
+							<p class="mb-2 text-gray-500 dark:text-gray-400">
+								Flowbite is first conceptualized and designed using the Figma
+								software so everything you see in the library has a design
+								equivalent in our Figma file.
+							</p>
+							<p class="text-gray-500 dark:text-gray-400">
+								Check out the
+								<a
+									href="https://flowbite.com/figma/"
+									class="text-blue-600 hover:underline dark:text-blue-500"
+									>Figma design system</a
+								>
+								based on the utility classes from Tailwind CSS and components
+								from Flowbite.
+							</p>
+						</div>
+					</div>
+					<h2 id="accordion-flush-heading-3">
+						<button
+							type="button"
+							class="flex w-full items-center justify-between gap-3 border-b border-gray-200 bg-red-300 py-5 font-medium text-gray-500 rtl:text-right dark:border-gray-700 dark:text-gray-400"
+							data-accordion-target="#accordion-flush-body-3"
+							aria-expanded="false"
+							aria-controls="accordion-flush-body-3"
+						>
+							<span
+								>What are the differences between Flowbite and Tailwind
+								UI?</span
+							>
+							<svg
+								data-accordion-icon
+								class="h-3 w-3 shrink-0 rotate-180"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 10 6"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5 5 1 1 5"
+								/>
+							</svg>
+						</button>
+					</h2>
+					<div
+						id="accordion-flush-body-3"
+						class="hidden"
+						aria-labelledby="accordion-flush-heading-3"
+					>
+						<div class="border-b border-gray-200 py-5 dark:border-gray-700">
+							<p class="mb-2 text-gray-500 dark:text-gray-400">
+								The main difference is that the core components from Flowbite
+								are open source under the MIT license, whereas Tailwind UI is a
+								paid product. Another difference is that Flowbite relies on
+								smaller and standalone components, whereas Tailwind UI offers
+								sections of pages.
+							</p>
+							<p class="mb-2 text-gray-500 dark:text-gray-400">
+								However, we actually recommend using both Flowbite, Flowbite
+								Pro, and even Tailwind UI as there is no technical reason
+								stopping you from using the best of two worlds.
+							</p>
+							<p class="mb-2 text-gray-500 dark:text-gray-400">
+								Learn more about these technologies:
+							</p>
+							<ul class="list-disc ps-5 text-gray-500 dark:text-gray-400">
+								<li>
+									<a
+										href="https://flowbite.com/pro/"
+										class="text-blue-600 hover:underline dark:text-blue-500"
+										>Flowbite Pro</a
+									>
+								</li>
+								<li>
+									<a
+										href="https://tailwindui.com/"
+										rel="nofollow"
+										class="text-blue-600 hover:underline dark:text-blue-500"
+										>Tailwind UI</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="m-4 rounded-lg bg-white shadow dark:bg-gray-900">
+			<div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
+				<div class="sm:flex sm:items-center sm:justify-between">
+					<a
+						href="https://flowbite.com/"
+						class="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
+					>
+						<img
+							src="https://flowbite.com/docs/images/logo.svg"
+							class="h-8"
+							alt="Flowbite Logo"
+						/>
+						<span
+							class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white"
+							>Flowbite</span
+						>
+					</a>
+					<ul
+						class="mb-6 flex flex-wrap items-center text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+					>
+						<li>
+							<a href="#" class="me-4 hover:underline md:me-6">About</a>
+						</li>
+						<li>
+							<a href="#" class="me-4 hover:underline md:me-6"
+								>Privacy Policy</a
+							>
+						</li>
+						<li>
+							<a href="/"></a>
+						</li>
+						<li>
+							<a href="#" class="me-4 hover:underline md:me-6">Licensing</a>
+						</li>
+						<li>
+							<a href="#" class="hover:underline">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<hr
+					class="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700"
+				/>
+				<span
+					class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+					>© 2023
+					<a href="https://flowbite.com/" class="hover:underline">Flowbite™</a
+					>. All Rights Reserved.</span
+				>
+			</div>
+		</footer>
+		<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
