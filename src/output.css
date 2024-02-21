@@ -1413,6 +1413,10 @@ input:checked + .toggle-bg {
   max-width: 36rem;
 }
 
+.max-w-\[278px\] {
+  max-width: 278px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2018,6 +2022,11 @@ input:checked + .toggle-bg {
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .pl-16 {
