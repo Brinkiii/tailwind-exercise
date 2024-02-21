@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="lenis.min.js"></script>
+    <script src="gsap.js" defer></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    </body>
+    <title>Momentum - AI Workout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&    display=swap"
+        rel="stylesheet">
+    <script src="rellax.min.js"></script>
+</head>
+
+<body class="bg-black">
+    <div class="container mx-auto pt-6">
+        <nav>
+            <img src="img/logo.png" alt="Momentum - Logo">
+        </nav>
+    </div>
+    <header class="-mt-[79px] grid min-h-svh place-items-center bg-[url('./img/momentum-bg.svg')] bg-cover">
+        <div class="rellax -mt-5 inline-flex flex-col items-center justify-center px-4 text-white"
+            data-rellax-speed="2">
+            <h1 class="mb-4 text-center font-headline text-4xl font-bold uppercase md:text-6xl lg:text-8xl">Momentum -
+                AI Workout</h1>
+            <p class="mb-6 text-center font-display text-xl">Put together your perfect workout plan, fitted to you - all
+                for free.
+                <span class="block">Don’t get lost in the details, get in there.</span></p>
+            <a href="/"
+                class="rounded-3xl border border-white px-7 py-4 font-display text-xl transition-all hover:bg-white hover:text-black">Workout
+                Plan AI</a>
+        </div>
+    </header>
+    <main>
+        <div class="container mx-auto mt-14 grid grid-cols-1 gap-9 px-4 text-white lg:grid-cols-2">
+            <div
+                class="bordered overflow-hidden rounded-[35px] bg-black/50 bg-[url('./img/pink-scatter.svg')] bg-contain bg-no-repeat">
+                <div class="blurred size-full px-14 py-[60px]">
+                    <h2 class="mb-11 font-headline text-2xl font-bold">With our workout planner you can:</h2>
+                    <ol class="list-inside list-decimal font-display text-2xl">
+                        <li class="border-b border-white/10 py-6">Guarantee the best workout routine for you</li>
+                        <li class="border-b border-white/10 py-6">Save time and information gathering</li>
+                        <li class="border-b border-white/10 py-6">Rely on AI controlled progression</li>
+                        <li class="border-b border-white/10 py-6">Get tips and feedback on your form</li>
+                        <li class="py-6">Be sure to get the best of the best</li>
+                    </ol>
+                    <a href="/" class="button-glow mt-9">Get started</a>
+                </div>
+            </div>
+            <div
+                class="bordered bento-r relative overflow-hidden rounded-[35px] bg-black/50 bg-[url('./img/green-scatter.svg')] bg-contain bg-no-repeat">
+                <div class="blurred size-full px-14 py-[60px]">
+                    <h2 class="mb-11 font-headline text-2xl font-bold">How does it work?</h2>
+                    <div id="accordion-collapse" data-accordion="collapse" class="max-w-[390px]">
+                        <h2 id="accordion-collapse-heading-1">
+                            <button type="button"
+                                class="flex w-full items-center justify-between gap-3 rounded-t-[35px] border border-b-0 border-white/10 bg-white/5 p-7 font-display text-lg font-medium text-white transition-all hover:bg-white/20 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-800 rtl:text-right"
+                                data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-1">
+                                <span class="font-normal">Which AI is used?</span>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" data-accordion-icon class="h-3 w-3 shrink-0" aria-hidden="true" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path
+                                        d="M12 6C12 6.06919 11.9725 6.13554 11.9236 6.18446C11.8747 6.23339 11.8083 6.26087 11.7391 6.26087H6.26087V11.7391C6.26087 11.8083 6.23339 11.8747 6.18446 11.9236C6.13554 11.9725 6.06919 12 6 12C5.93081 12 5.86446 11.9725 5.81554 11.9236C5.76661 11.8747 5.73913 11.8083 5.73913 11.7391V6.26087H0.26087C0.191683 6.26087 0.12533 6.23339 0.076407 6.18446C0.0274844 6.13554 0 6.06919 0 6C0 5.93081 0.0274844 5.86446 0.076407 5.81554C0.12533 5.76661 0.191683 5.73913 0.26087 5.73913H5.73913V0.26087C5.73913 0.191683 5.76661 0.12533 5.81554 0.076407C5.86446 0.0274844 5.93081 0 6 0C6.06919 0 6.13554 0.0274844 6.18446 0.076407C6.23339 0.12533 6.26087 0.191683 6.26087 0.26087V5.73913H11.7391C11.8083 5.73913 11.8747 5.76661 11.9236 5.81554C11.9725 5.86446 12 5.93081 12 6Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-1" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-1">
+                            <div class="border border-b-0 border-white/10 p-7 dark:border-gray-700 dark:bg-gray-900">
+                                <p class="mb-2 text-white dark:text-gray-400">Flowbite is an open-source library of
+                                    interactive components built on top of Tailwind CSS including buttons, dropdowns,
+                                    modals, navbars, and more.</p>
+                                <p class="text-white dark:text-gray-400">Check out this guide to learn how to <a
+                                        href="/docs/getting-started/introduction/"
+                                        class="text-blue-600 hover:underline dark:text-blue-500">get started</a> and
+                                    start developing websites even faster with components on top of Tailwind CSS.</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-collapse-heading-2">
+                            <button type="button"
+                                class="flex w-full items-center justify-between gap-3 border border-b-0 border-white/10 bg-white/5 p-7 font-display text-lg font-medium text-white transition-all hover:bg-white/20 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-800 rtl:text-right"
+                                data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-2">
+                                <span class="font-normal">On which data is this based?</span>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" data-accordion-icon class="h-3 w-3 shrink-0" aria-hidden="true" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path
+                                        d="M12 6C12 6.06919 11.9725 6.13554 11.9236 6.18446C11.8747 6.23339 11.8083 6.26087 11.7391 6.26087H6.26087V11.7391C6.26087 11.8083 6.23339 11.8747 6.18446 11.9236C6.13554 11.9725 6.06919 12 6 12C5.93081 12 5.86446 11.9725 5.81554 11.9236C5.76661 11.8747 5.73913 11.8083 5.73913 11.7391V6.26087H0.26087C0.191683 6.26087 0.12533 6.23339 0.076407 6.18446C0.0274844 6.13554 0 6.06919 0 6C0 5.93081 0.0274844 5.86446 0.076407 5.81554C0.12533 5.76661 0.191683 5.73913 0.26087 5.73913H5.73913V0.26087C5.73913 0.191683 5.76661 0.12533 5.81554 0.076407C5.86446 0.0274844 5.93081 0 6 0C6.06919 0 6.13554 0.0274844 6.18446 0.076407C6.23339 0.12533 6.26087 0.191683 6.26087 0.26087V5.73913H11.7391C11.8083 5.73913 11.8747 5.76661 11.9236 5.81554C11.9725 5.86446 12 5.93081 12 6Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-2" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-2">
+                            <div class="border border-b-0 border-white/10 p-7 dark:border-gray-700">
+                                <p class="mb-2 text-white dark:text-gray-400">Flowbite is first conceptualized and
+                                    designed using the Figma software so everything you see in the library has a design
+                                    equivalent in our Figma file.</p>
+                                <p class="text-white dark:text-gray-400">Check out the <a
+                                        href="https://flowbite.com/figma/"
+                                        class="text-blue-600 hover:underline dark:text-blue-500">Figma design system</a>
+                                    based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-collapse-heading-3">
+                            <button type="button"
+                                class="flex w-full items-center justify-between gap-3 border border-white/10 bg-white/5 p-7 font-display text-lg font-medium text-white transition-all hover:bg-white/20 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-800 rtl:text-right"
+                                data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-3">
+                                <span class="font-normal">What does it cost?</span>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" data-accordion-icon class="h-3 w-3 shrink-0" aria-hidden="true" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path
+                                        d="M12 6C12 6.06919 11.9725 6.13554 11.9236 6.18446C11.8747 6.23339 11.8083 6.26087 11.7391 6.26087H6.26087V11.7391C6.26087 11.8083 6.23339 11.8747 6.18446 11.9236C6.13554 11.9725 6.06919 12 6 12C5.93081 12 5.86446 11.9725 5.81554 11.9236C5.76661 11.8747 5.73913 11.8083 5.73913 11.7391V6.26087H0.26087C0.191683 6.26087 0.12533 6.23339 0.076407 6.18446C0.0274844 6.13554 0 6.06919 0 6C0 5.93081 0.0274844 5.86446 0.076407 5.81554C0.12533 5.76661 0.191683 5.73913 0.26087 5.73913H5.73913V0.26087C5.73913 0.191683 5.76661 0.12533 5.81554 0.076407C5.86446 0.0274844 5.93081 0 6 0C6.06919 0 6.13554 0.0274844 6.18446 0.076407C6.23339 0.12533 6.26087 0.191683 6.26087 0.26087V5.73913H11.7391C11.8083 5.73913 11.8747 5.76661 11.9236 5.81554C11.9725 5.86446 12 5.93081 12 6Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-3" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-3">
+                            <div class="border border-t-0 border-white/10 p-7 dark:border-gray-700">
+                                <p class="mb-2 text-white dark:text-gray-400">The main difference is that the core
+                                    components from Flowbite are open source under the MIT license, whereas Tailwind UI
+                                    is a paid product. Another difference is that Flowbite relies on smaller and
+                                    standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                <p class="mb-2 text-white dark:text-gray-400">However, we actually recommend using
+                                    both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason
+                                    stopping you from using the best of two worlds.</p>
+                                <p class="mb-2 text-white dark:text-gray-400">Learn more about these technologies:
+                                </p>
+                                <ul class="list-disc ps-5 text-white dark:text-gray-400">
+                                    <li><a href="https://flowbite.com/pro/"
+                                            class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a>
+                                    </li>
+                                    <li><a href="https://tailwindui.com/" rel="nofollow"
+                                            class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h2 id="accordion-collapse-heading-3">
+                            <button type="button"
+                                class="flex w-full items-center justify-between gap-3 rounded-b-[35px] border border-white/10 bg-white/5 p-7 font-display text-lg font-medium text-white transition-all hover:bg-white/20 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-800 rtl:text-right"
+                                data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
+                                aria-controls="accordion-collapse-body-3">
+                                <span class="font-normal">Do you have an app?</span>
+                                
+                                <svg xmlns="http://www.w3.org/2000/svg" data-accordion-icon class="h-3 w-3 shrink-0" aria-hidden="true" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path
+                                        d="M12 6C12 6.06919 11.9725 6.13554 11.9236 6.18446C11.8747 6.23339 11.8083 6.26087 11.7391 6.26087H6.26087V11.7391C6.26087 11.8083 6.23339 11.8747 6.18446 11.9236C6.13554 11.9725 6.06919 12 6 12C5.93081 12 5.86446 11.9725 5.81554 11.9236C5.76661 11.8747 5.73913 11.8083 5.73913 11.7391V6.26087H0.26087C0.191683 6.26087 0.12533 6.23339 0.076407 6.18446C0.0274844 6.13554 0 6.06919 0 6C0 5.93081 0.0274844 5.86446 0.076407 5.81554C0.12533 5.76661 0.191683 5.73913 0.26087 5.73913H5.73913V0.26087C5.73913 0.191683 5.76661 0.12533 5.81554 0.076407C5.86446 0.0274844 5.93081 0 6 0C6.06919 0 6.13554 0.0274844 6.18446 0.076407C6.23339 0.12533 6.26087 0.191683 6.26087 0.26087V5.73913H11.7391C11.8083 5.73913 11.8747 5.76661 11.9236 5.81554C11.9725 5.86446 12 5.93081 12 6Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </h2>
+                        <div id="accordion-collapse-body-3" class="hidden"
+                            aria-labelledby="accordion-collapse-heading-3">
+                            <div class="border border-t-0 border-white/10 p-7 dark:border-gray-700">
+                                <p class="mb-2 text-white dark:text-gray-400">The main difference is that the core
+                                    components from Flowbite are open source under the MIT license, whereas Tailwind UI
+                                    is a paid product. Another difference is that Flowbite relies on smaller and
+                                    standalone components, whereas Tailwind UI offers sections of pages.</p>
+                                <p class="mb-2 text-white dark:text-gray-400">However, we actually recommend using
+                                    both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason
+                                    stopping you from using the best of two worlds.</p>
+                                <p class="mb-2 text-white dark:text-gray-400">Learn more about these technologies:
+                                </p>
+                                <ul class="list-disc ps-5 text-white dark:text-gray-400">
+                                    <li><a href="https://flowbite.com/pro/"
+                                            class="text-blue-600 hover:underline dark:text-blue-500">Flowbite Pro</a>
+                                    </li>
+                                    <li><a href="https://tailwindui.com/" rel="nofollow"
+                                            class="text-blue-600 hover:underline dark:text-blue-500">Tailwind UI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/" class="button-glow green mt-9">More info</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto mt-9 grid grid-cols-1 gap-9 px-4 text-white md:grid-cols-2 xl:grid-cols-4">
+            <div class="bordered blurred flex min-h-[329px] flex-col items-center justify-center rounded-[35px] px-11">
+                <span class="bordered more flex min-h-[100px] min-w-[100px] items-center justify-center rounded-full bg-white/25 p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <path d="M25.4877 5.94943C25.4877 5.94943 25.7062 9.69229 29.0081 12.9925C32.31 16.2946 36.0508 16.5149 36.0508 16.5149L37.8119 14.7537C39.2129 13.3526 40 11.4524 40 9.47095C40 7.48953 39.2129 5.58927 37.8119 4.18819C36.4109 2.78712 34.5107 2 32.5294 2C30.5481 2 28.6479 2.78712 27.2469 4.18819L25.4858 5.94943L21.0022 10.4333M36.0508 16.513L26.0576 26.5105L20.1662 32.3984L19.8623 32.7043C18.7642 33.8005 18.2151 34.3496 17.611 34.8208C16.898 35.3773 16.1266 35.8545 15.3102 36.2438C14.6187 36.5725 13.8835 36.8176 12.4111 37.3078L6.17773 39.3863M6.17773 39.3863L4.65406 39.8955C4.2989 40.0146 3.91755 40.0323 3.55289 39.9465C3.18824 39.8608 2.85472 39.675 2.58984 39.4101C2.32495 39.1452 2.1392 38.8117 2.05346 38.447C1.96772 38.0824 1.98539 37.701 2.10448 37.3458L2.61364 35.8221M6.17773 39.3863L2.61364 35.8221M2.61364 35.8221L4.69206 29.5884C5.18222 28.1159 5.4273 27.3807 5.75597 26.6891C6.14544 25.8721 6.6223 25.1007 7.17895 24.3883C7.65011 23.7841 8.19916 23.235 9.29537 22.1387L14.3527 17.083" stroke="#C800D5" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <blockquote class="mb-2 mt-9 font-headline text-xl font-bold">Put in your info</blockquote>
+                <p class="text-center">Simply put in your stats,
+                    <span class="block">experience and preferred schedule</span></p>
+            </div>
+            <div class="bordered blurred flex min-h-[329px] flex-col items-center justify-center rounded-[35px] px-11">
+                <span class="bordered more green flex min-h-[100px] min-w-[100px] items-center justify-center rounded-full bg-white/25 p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="28" viewBox="0 0 36 28" fill="none">
+                        <path d="M20 4H26V24H20V28H36V24H30V4H36V0H20V4ZM12 0H4C1.794 0 0 1.794 0 4V28H4V18H12V28H16V4C16 1.794 14.206 0 12 0ZM4 14V4H12V14H4Z" fill="#00DE6C"/>
+                    </svg>
+                </span>
+                <blockquote class="mb-2 mt-9 font-headline text-xl font-bold">Let AI do its thing</blockquote>
+                <p class="text-center">Our revolutionary AI will generate
+                    <span class="block">the perfect workout plan for your</span></p>
+            </div>
+            <div class="bordered blurred flex min-h-[329px] flex-col items-center justify-center rounded-[35px] px-11">
+                <span class="bordered more flex min-h-[100px] min-w-[100px] items-center justify-center rounded-full bg-white/25 px-5 py-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="32" viewBox="0 0 60 32" fill="none">
+                        <path d="M54.9971 1.07474e-06C54.183 0.000210699 53.3814 0.199188 52.6617 0.579645C51.9421 0.960102 51.3262 1.51053 50.8676 2.18311C50.409 2.85569 50.1216 3.63008 50.0303 4.439C49.939 5.24792 50.0465 6.06691 50.3436 6.8248L39.8231 17.3457C38.6504 16.8841 37.3462 16.8841 36.1734 17.3457L28.6527 9.82471C28.9505 9.06665 29.0586 8.24731 28.9676 7.43794C28.8766 6.62857 28.5893 5.85369 28.1306 5.18067C27.672 4.50765 27.0558 3.95687 26.3358 3.57624C25.6158 3.1956 24.8137 2.99663 23.9992 2.99663C23.1848 2.99663 22.3827 3.1956 21.6627 3.57624C20.9427 3.95687 20.3265 4.50765 19.8679 5.18067C19.4092 5.85369 19.1219 6.62857 19.0309 7.43794C18.9399 8.24731 19.048 9.06665 19.3458 9.82471L6.82545 22.3456C5.75618 21.9261 4.57509 21.8876 3.48078 22.2366C2.38647 22.5855 1.44567 23.3007 0.816582 24.2617C0.187492 25.2228 -0.0915235 26.3711 0.0264494 27.5137C0.144422 28.6562 0.652189 29.7234 1.46437 30.5356C2.27655 31.3478 3.34362 31.8556 4.48614 31.9735C5.62867 32.0915 6.77697 31.8125 7.73797 31.1834C8.69898 30.5543 9.41407 29.6134 9.76301 28.5191C10.1119 27.4247 10.0735 26.2436 9.65401 25.1743L22.1744 12.6534C23.3472 13.1151 24.6513 13.1151 25.8241 12.6534L33.3448 20.1744C33.047 20.9325 32.9389 21.7518 33.0299 22.5612C33.1209 23.3706 33.4082 24.1454 33.8669 24.8185C34.3256 25.4915 34.9417 26.0423 35.6617 26.4229C36.3817 26.8035 37.1838 27.0025 37.9983 27.0025C38.8127 27.0025 39.6148 26.8035 40.3348 26.4229C41.0548 26.0423 41.671 25.4915 42.1296 24.8185C42.5883 24.1454 42.8756 23.3706 42.9666 22.5612C43.0576 21.7518 42.9495 20.9325 42.6517 20.1744L53.1722 9.65347C53.8568 9.92243 54.5923 10.037 55.3263 9.98907C56.0602 9.94112 56.7746 9.73181 57.4184 9.37606C58.0622 9.02031 58.6195 8.52689 59.0507 7.93098C59.4819 7.33508 59.7764 6.65137 59.913 5.9286C60.0496 5.20584 60.0251 4.46184 59.8412 3.74964C59.6572 3.03744 59.3185 2.3746 58.849 1.80838C58.3795 1.24216 57.7908 0.78651 57.125 0.473925C56.4592 0.16134 55.7326 -0.000481181 54.9971 1.07474e-06Z" fill="#C800D5"/>
+                    </svg>
+                </span>
+                <blockquote class="mb-2 mt-9 font-headline text-xl font-bold">Look at statistics</blockquote>
+                <p class="text-center">Check out all the statistics
+                    <span class="block">regarding your workout plan</span></p>
+            </div>
+            <div class="bordered blurred flex min-h-[329px] flex-col items-center justify-center rounded-[35px] px-11">
+                <span class="bordered more green flex min-h-[100px] min-w-[100px] items-center justify-center rounded-full bg-white/25 px-7 py-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M14.8 14H9.2C8.88174 14 8.57652 14.1264 8.35147 14.3515C8.12643 14.5765 8 14.8817 8 15.2V32.8C8 32.9576 8.03104 33.1136 8.09134 33.2592C8.15165 33.4048 8.24004 33.5371 8.35147 33.6485C8.4629 33.76 8.59519 33.8484 8.74078 33.9087C8.88637 33.969 9.04241 34 9.2 34H14.8C14.9576 34 15.1136 33.969 15.2592 33.9087C15.4048 33.8484 15.5371 33.76 15.6485 33.6485C15.76 33.5371 15.8483 33.4048 15.9087 33.2592C15.969 33.1136 16 32.9576 16 32.8V15.2C16 14.8817 15.8736 14.5765 15.6485 14.3515C15.4235 14.1264 15.1183 14 14.8 14ZM38.8 14H33.2C32.8817 14 32.5765 14.1264 32.3515 14.3515C32.1264 14.5765 32 14.8817 32 15.2V32.8C32 32.9576 32.031 33.1136 32.0913 33.2592C32.1516 33.4048 32.24 33.5371 32.3515 33.6485C32.4629 33.76 32.5952 33.8484 32.7408 33.9087C32.8864 33.969 33.0424 34 33.2 34H38.8C38.9576 34 39.1136 33.969 39.2592 33.9087C39.4048 33.8484 39.5371 33.76 39.6485 33.6485C39.76 33.5371 39.8484 33.4048 39.9087 33.2592C39.969 33.1136 40 32.9576 40 32.8V15.2C40 14.8817 39.8736 14.5765 39.6485 14.3515C39.4235 14.1264 39.1183 14 38.8 14Z" stroke="#00DE6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 24H32M2 28.8V19.2C2 18.8817 2.12643 18.5765 2.35147 18.3515C2.57652 18.1264 2.88174 18 3.2 18H6.8C7.11826 18 7.42348 18.1264 7.64853 18.3515C7.87357 18.5765 8 18.8817 8 19.2V28.8C8 29.1183 7.87357 29.4235 7.64853 29.6485C7.42348 29.8736 7.11826 30 6.8 30H3.2C2.88174 30 2.57652 29.8736 2.35147 29.6485C2.12643 29.4235 2 29.1183 2 28.8ZM46 28.8V19.2C46 18.8817 45.8736 18.5765 45.6485 18.3515C45.4235 18.1264 45.1183 18 44.8 18H41.2C40.8817 18 40.5765 18.1264 40.3515 18.3515C40.1264 18.5765 40 18.8817 40 19.2V28.8C40 29.1183 40.1264 29.4235 40.3515 29.6485C40.5765 29.8736 40.8817 30 41.2 30H44.8C45.1183 30 45.4235 29.8736 45.6485 29.6485C45.8736 29.4235 46 29.1183 46 28.8Z" stroke="#00DE6C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <blockquote class="mb-2 mt-9 font-headline text-xl font-bold">Work out!</blockquote>
+                <p class="text-center">Get started with your personal,
+                    <span class="block">perfectly fitted workout</span></p>
+            </div>
+        </div>
+        <div class="container mx-auto mt-9 grid grid-cols-1 gap-9 bg-black/35 px-4 text-white">
+            <div class="bordered breaker blurred flex flex-col items-center justify-center rounded-[35px] py-24">
+                <div class="relative z-10 flex flex-col items-center justify-center">
+                    <blockquote class="relative z-10 mb-2 text-xl">Are you ready?</blockquote>
+                    <h2 class="relative z-10 mb-4 font-headline text-4xl font-bold">Then get to it!</h2>
+                    <p class="relative z-10 max-w-[578px] text-center text-xl">Put together your perfect workout plan, fitted to you - all for free.
+                        <span class="block">Don’t get lost in the details, get in there.</span></p>
+                    <a href="/" class="button-glow relative z-10 mt-6">Get started</a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto mt-9 grid grid-cols-12 gap-9 px-4 text-white">
+            <div class="bordered blurred col-span-8 flex flex-col items-center justify-center rounded-[35px] py-24">
+                test 1
+            </div>
+            <div class="bordered blurred col-span-4 flex flex-col items-center justify-center rounded-[35px] py-24">
+                test 2
+            </div>
+        </div>
+    </main>
+    <footer class="m-4 rounded-lg bg-white shadow dark:bg-gray-900">
+        <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Flowbite</span>
+                </a>
+                <ul
+                    class="mb-6 flex flex-wrap items-center text-sm font-medium text-white dark:text-gray-400 sm:mb-0">
+                    <li>
+                        <a href="#" class="me-4 hover:underline md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="me-4 hover:underline md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="/"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="me-4 hover:underline md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-white/10 dark:border-gray-700 sm:mx-auto lg:my-8" />
+            <span class="block text-sm text-white dark:text-gray-400 sm:text-center">© 2023
+                <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <script>
+        // Also can pass in optional settings block
+        var rellax = new Rellax('.rellax', {
+            speed: -2,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        });
+    </script>
+
+</html>

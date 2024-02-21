@@ -5,28 +5,34 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="output.css" />
+	<script src="lenis.min.js"></script>
+	<script src="gsap.js" defer></script>
+	<script src="https://unpkg.com/split-type"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script></body>
+
 	<title>Document</title>
 </head>
 
 <body>
-	<header class="flex min-h-svh items-center justify-center bg-[url('img/mountains.jpg')] bg-cover bg-center">
+	<header class="header flex min-h-svh items-center justify-center bg-[url('img/mountains.jpg')] bg-cover bg-center">
 		<div>
 			<div class="text-center text-white">
 				<span class="block text-xl">we are</span>
-				<blockquote class="mb-4 text-9xl font-extrabold uppercase">Minimal</blockquote>
-				<ul class="flex flex-row justify-center gap-5 text-lg uppercase">
+				<blockquote class="mb-4 text-5xl font-extrabold uppercase md:text-9xl" id="my-text">Minimal</blockquote>
+				<ul class="flex flex-col justify-center gap-5 text-lg uppercase sm:flex-row">
 					<li>Design</li>
 					<li>I</li>
 					<li>Development</li>
 					<li>I</li>
 					<li>Success</li>
 				</ul>
+				<button class="gradient-button mt-4 bg-white/30 px-6 py-4 backdrop-blur-sm hover:scale-105">Check us out</button>
 			</div>
 		</div>
 	</header>
 	<main>
-		<nav>
-			<ul class="flex flex-row items-center justify-between gap-4 border-b border-b-slate-100 px-12 py-2">
+		<nav id="navigation">
+			<ul class="flex flex-col items-center justify-between gap-4 border-b border-b-slate-100 px-12 py-2 md:flex-row">
 				<li class="order-2 md:order-none"><a href="#" class="text-lg uppercase text-gray-400 transition-all hover:text-black">Home</a></li>
 				<li><a href="#" class="text-lg uppercase text-gray-400 transition-all hover:text-black">Services</a></li>
 				<li><a href="#" class="text-lg uppercase text-gray-400 transition-all hover:text-black">Portfolio</a></li>
@@ -36,6 +42,107 @@
 				<li><a href="#" class="text-lg uppercase text-gray-400 transition-all hover:text-black">Content</a></li>
 			</ul>
 		</nav>
+		<div class="animated-element container mx-auto flex flex-col items-center justify-center py-44">
+			<h2 class="font-serif text-center text-4xl font-semibold">We design digital products</h2>
+			<hr class="mx-auto my-6 flex w-16 justify-center">
+			<p class="max-w-[600px] text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi eos explicabo velit repellat error debitis ex repellendus vitae consectetur ducimus obcaecati cum neque ullam temporibus aperiam, veniam, dolorem dolor. Quidem?</p>
+		</div>
+		<div class="container mx-auto">
+			<div class="flex flex-col items-center justify-center gap-12 lg:flex-row lg:items-center lg:justify-between">
+				<div class="teaser flex w-1/4 flex-col items-center justify-center gap-4">
+					<svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.6 8.5h8m-8 3.5H12m7.1-7H5c-.2 0-.5 0-.6.3-.2.1-.3.3-.3.6V15c0 .3 0 .5.3.6.1.2.4.3.6.3h4l3 4 3-4h4.1c.2 0 .5 0 .6-.3.2-.1.3-.3.3-.6V6c0-.3 0-.5-.3-.6a.9.9 0 0 0-.6-.3Z"/>
+					  </svg>
+					  <hr class="w-12">
+					  <p>Lorem</p>
+				</div>
+				<div class="teaser flex w-1/4 flex-col items-center justify-center gap-4">
+					<svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.6 8.5h8m-8 3.5H12m7.1-7H5c-.2 0-.5 0-.6.3-.2.1-.3.3-.3.6V15c0 .3 0 .5.3.6.1.2.4.3.6.3h4l3 4 3-4h4.1c.2 0 .5 0 .6-.3.2-.1.3-.3.3-.6V6c0-.3 0-.5-.3-.6a.9.9 0 0 0-.6-.3Z"/>
+					  </svg>
+					  <hr class="w-12">
+					  <p>Lorem</p>
+				</div>
+				<div class="teaser flex w-1/4 flex-col items-center justify-center gap-4">
+					<svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.6 8.5h8m-8 3.5H12m7.1-7H5c-.2 0-.5 0-.6.3-.2.1-.3.3-.3.6V15c0 .3 0 .5.3.6.1.2.4.3.6.3h4l3 4 3-4h4.1c.2 0 .5 0 .6-.3.2-.1.3-.3.3-.6V6c0-.3 0-.5-.3-.6a.9.9 0 0 0-.6-.3Z"/>
+					  </svg>
+					  <hr class="w-12">
+					  <p>Lorem</p>
+				</div>
+				<div class="teaser flex w-1/4 flex-col items-center justify-center gap-4">
+					<svg class="h-6 w-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.6 8.5h8m-8 3.5H12m7.1-7H5c-.2 0-.5 0-.6.3-.2.1-.3.3-.3.6V15c0 .3 0 .5.3.6.1.2.4.3.6.3h4l3 4 3-4h4.1c.2 0 .5 0 .6-.3.2-.1.3-.3.3-.6V6c0-.3 0-.5-.3-.6a.9.9 0 0 0-.6-.3Z"/>
+					  </svg>
+					  <hr class="w-12">
+					  <p>Lorem</p>
+				</div>
+			</div>
+		</div>
+		<div class="bg-gray-900 text-white">
+			<div class="container mx-auto">
+				<div class="mt-44 grid grid-cols-2 gap-16 py-32">
+					<div>
+						<h2 class="mb-6 text-4xl">
+							We design delightful digital experiences
+						</h2>
+						<p class="mb-4">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi voluptates quae eos fugit voluptas. Laboriosam quia, corrupti ea tenetur, harum aliquid nulla inventore fugit nesciunt expedita enim iure exercitationem assumenda.
+						</p>
+						<p class="mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, sequi distinctio sapiente, suscipit aliquid, deleniti incidunt repellat ducimus corrupti quos quisquam optio magnam neque molestiae earum! Eligendi nam incidunt optio.</p>
+						<button type="button" class="mb-2 me-2 rounded-full bg-white px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-white dark:focus:ring-blue-800">Default</button>
+					</div>
+					<div class="grid grid-cols-3 grid-rows-3 gap-4">
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+						<div>
+							<p>lorem</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mx-auto flex flex-col items-center justify-center py-32">
+			<q class="mb-4 flex max-w-[800px] justify-center text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe sit commodi accusamus sunt ipsa iure voluptatem magnam laborum dolorum maxime culpa nobis voluptatum dignissimos pariatur voluptas eveniet, quas iste nostrum?</q>
+			<blockquote class="text-center font-bold">Lorem</blockquote>
+		</div>
+		<div class="bg-gray-400 py-32">
+			<div class="container mx-auto flex flex-col items-center justify-center">
+				<h3 class="text-center text-3xl">
+					Recent work
+				</h3>
+				<hr class="mt-8 w-36">
+				<div class="mt-8 flex flex-row">
+					<button type="button" class="mb-2 border-r border-r-slate-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default</button>
+					<button type="button" class="mb-2 border-r border-r-slate-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default</button>
+					<button type="button" class="mb-2 border-r border-r-slate-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default</button>
+					<button type="button" class="mb-2 border-r border-r-slate-200 bg-white px-5 py-2.5 text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default</button>
+					<button type="button" class="mb-2 bg-white px-5 py-2.5 text-sm font-medium hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default</button>
+				</div>
+			</div>
+		</div>
 	</main>
 	<footer class="m-4 rounded-lg bg-white shadow dark:bg-gray-900">
 		<div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
@@ -70,6 +177,7 @@
 	</footer>
 	<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 	<script src="script.js"></script>
-</body>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
 </html>

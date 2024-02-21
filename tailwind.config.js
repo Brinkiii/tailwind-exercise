@@ -42,7 +42,9 @@ module.exports = {
     'Segoe UI Emoji', 
     'Segoe UI Symbol', 
     'Noto Color Emoji'
-  ]
+  ],
+  'headline': ['Jura'],
+  'display': ['Jost'],
     }
   },
   plugins: [
