@@ -1397,6 +1397,10 @@ input:checked + .toggle-bg {
   max-width: 80rem;
 }
 
+.max-w-\[2000px\] {
+  max-width: 2000px;
+}
+
 .max-w-\[390px\] {
   max-width: 390px;
 }
@@ -1698,6 +1702,11 @@ input:checked + .toggle-bg {
   border-width: 0px;
 }
 
+.border-x {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1751,6 +1760,11 @@ input:checked + .toggle-bg {
 
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
+}
+
+.border-x-white\/10 {
+  border-left-color: rgb(255 255 255 / 0.1);
+  border-right-color: rgb(255 255 255 / 0.1);
 }
 
 .border-b-slate-100 {
@@ -2095,6 +2109,10 @@ input:checked + .toggle-bg {
   line-height: 1.75rem;
 }
 
+.text-\[16px\] {
+  font-size: 16px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2190,6 +2208,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#8f8f8f\] {
+  --tw-text-opacity: 1;
+  color: rgb(143 143 143 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -2720,6 +2743,10 @@ input:checked + .toggle-bg {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2779,6 +2806,10 @@ input:checked + .toggle-bg {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row {
