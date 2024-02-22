@@ -2027,11 +2027,6 @@ input:checked + .toggle-bg {
   padding-bottom: 2rem;
 }
 
-.py-\[60px\] {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .pl-16 {
   padding-left: 4rem;
 }
@@ -2361,6 +2356,7 @@ input:checked + .toggle-bg {
 }
 
 .bento-r:after {
+  display: none;
   content:'';
   height: 467px;
   width: 269px;
@@ -2372,6 +2368,13 @@ input:checked + .toggle-bg {
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: exclusion;
+  pointer-events: none;
+}
+
+@media (min-width: 654px) {
+  .bento-r:after {
+    display: inline-block;
+  }
 }
 
 .breaker {
@@ -2805,9 +2808,19 @@ input:checked + .toggle-bg {
     padding: 0px;
   }
 
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .md\:text-5xl {

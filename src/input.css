@@ -93,6 +93,7 @@ overflow: hidden;
 }
 
 .bento-r:after {
+	display: none;
 	content:'';
 	height: 467px;
 	width: 269px;
@@ -103,6 +104,13 @@ overflow: hidden;
 	background-image: url(img/bento-r.png);
 	object-fit: cover;
 	mix-blend-mode: exclusion;
+	pointer-events: none;
+}
+
+@media (min-width: 654px) {
+.bento-r:after {
+	display: inline-block;
+}
 }
 
 .breaker {
