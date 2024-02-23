@@ -176,3 +176,7 @@ overflow: hidden;
 	z-index: -1;
 	filter: blur(50px);
 }
+
+#last[aria-expanded="true"] {
+	@apply !rounded-b-none;
+}
