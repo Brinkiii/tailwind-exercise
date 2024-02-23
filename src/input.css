@@ -122,6 +122,10 @@ overflow: hidden;
 	background-position: center;
 }
 
+::i-block-chrome,.breaker{
+	background-attachment: scroll;
+} 
+
 .breaker:before {
 	content: '';
 	width: 626px;
